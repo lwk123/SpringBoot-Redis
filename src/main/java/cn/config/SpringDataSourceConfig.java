@@ -1,6 +1,5 @@
 package cn.config;
-
-import javax.activation.DataSource;
+import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -21,7 +20,7 @@ public class SpringDataSourceConfig {
 	@Bean(name = "springDataSource")
 	@ConfigurationProperties(prefix = "spring.datasource")
 	public DataSource sendDataSource(){
-		return (DataSource) DataSourceBuilder.create().build();
+		return DataSourceBuilder.create().build();
 	}
 	@Primary
 	@Bean(name = "springTransactionManager")

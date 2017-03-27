@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="cn.com.redis.dao.IEmployeeDao">
+	<select id="getEmployeeInfoById" resultType="cn.com.redis.entity.Employee">
+		SELECT
+			el.unid AS unid,
+			el.name AS name,
+			el.address AS address,
+			el.age AS age,
+			el.workPlace AS workPlace,
+			el.registerTime AS registerTime
+			
+		FROM
+			Employee AS el 
+		WHERE
+			el.unid = #{unid}
+	</select>
+</mapper>
