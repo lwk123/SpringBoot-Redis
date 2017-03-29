@@ -12,5 +12,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	public Employee getEmployeeInfoById(String unid) {
 		return employeeDao.getEmployeeInfoById(unid);
 	}
+	@Override
+	public boolean saveEmployeeInfo(Employee employeeInfo) {
+		return employeeDao.saveEmployeeInfo(employeeInfo);
+	}
 
 }

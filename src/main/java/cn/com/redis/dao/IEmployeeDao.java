@@ -11,4 +11,11 @@ public interface IEmployeeDao {
 	 * @return
 	 */
 	public Employee getEmployeeInfoById(@Param("unid") String unid);
+	
+	/**
+	 * 保存员工信息
+	 * @param employeeInfo
+	 * @return
+	 */
+	public boolean saveEmployeeInfo(Employee employeeInfo);
 }
