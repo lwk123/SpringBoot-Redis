@@ -19,7 +19,7 @@
 			el.unid = #{unid}
 	</select>
 	<insert id="saveEmployeeInfo" parameterType="cn.com.redis.entity.Employee">
-		INSERT INTO	GEIKMP3_dailyMealAllowance
+		INSERT INTO	Employee
 		(
 			unid, 
 			name,
