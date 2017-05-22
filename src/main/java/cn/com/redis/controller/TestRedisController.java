@@ -29,7 +29,7 @@ public class TestRedisController {
 	@RequestMapping(value = "/saveEmployeeInfo", method = RequestMethod.GET)
 	public void saveEmployeeInfo() {
 		Employee employeeInfo = new Employee();
-		for (int i = 0; i < 10000; i++) {
+		for (int i = 0; i < 10; i++) {
 			employeeInfo.setUnid(IdUtils.getUUID());
 			employeeInfo.setName("罗成");
 			employeeInfo.setAge(24);
